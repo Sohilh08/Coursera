@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body CSS */
+body {
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 2%;
+}
+
+/* Typography CSS */
+h1 {
+    text-align: center;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 50px;
+    padding: 8% 0;
+}
+
+/* Section CSS */
+
+section {
+    box-sizing: border-box; 
+    border: 1px solid #000;
+    background-color: #999999;
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;   
+}
+
+section p {
+    color: black;
+    margin: 0px;
+    padding: 20px 10px;
+    position: relative;
+    clear: right;
+}
+
+
+/* Section Title Region Styling */
+.section-title {
+    float: right;
+    width: 100px;
+    padding: 5px;
+    margin: 0px;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+#chicken-section .section-title { 
+    background-color: #d59898; 
+    color: #000; /* Adjust text color for better contrast */
+}
+
+#beef-section .section-title { 
+    background-color: #c14543; 
+    color: #fff; /* Adjust text color for better contrast */
+}
+
+#sushi-section .section-title { 
+    background-color: #e5d198; 
+    color: #000; /* Adjust text color for better contrast */
+}
+
+/* Media Query for Desktop View (768px - 991px) */
+@media (min-width: 992px) {
+    section {
+        float: left;
+        width: calc(33.33% - 20px); /* Adjusted width to account for spacing */
+        margin: 0 10px; /* Added margin to create spacing between sections */
+    }
+}
+
+/* Media Query for Tablet View (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    #chicken-section, #beef-section {
+        float: left;
+        width: calc(50% - 10px); /* Adjusted width to account for spacing */
+        margin: 0 10px 20px 0; /* Added margin to create spacing between sections */
+    }
+    #sushi-section {
+        float: left;
+        width: calc(100% - 10px); /* Adjusted width to account for spacing */
+        margin: 0 0 20px 0; /* Added margin to create spacing below the last section */
+    }
+}
+
+/* Media Query for Mobile View (≤ 767px) */
+@media (max-width: 767px) {
+    section {
+        float: none;
+        width: 100%;
+        margin: 20px 0; /* Added margin to create spacing between stacked sections */
+    }
+}
